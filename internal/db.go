@@ -47,5 +47,5 @@ func Init() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Successfully connected!")
+	log.Println("Successfully connected!")
 }

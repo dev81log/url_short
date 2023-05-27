@@ -22,7 +22,7 @@ func TestInit(t *testing.T) {
 
 	Init()
 
-	// Check if log contains success message and if db is not nil
+	// Check if log contains success message
 	assert.Contains(t, logOutput.String(), "Successfully connected!")
 
 	assert.NotNil(t, db)
