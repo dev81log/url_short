@@ -6,6 +6,7 @@ import (
 
 func main() {
 	internal.Init()
-	internal.InsertURLAndCode("http://exemplolinkpostandsave.com", "123456")
-	internal.GetURLByCode("123456")
+	//internal.InsertURLAndCode("http://expires_at.com", "exp123")
+	// internal.GetURLByCode("123456")
+	internal.IsExpiredCode("exp123")
 }

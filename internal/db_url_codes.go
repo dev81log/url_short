@@ -1,6 +1,8 @@
 package internal
 
-import "log"
+import (
+	"log"
+)
 
 func InsertURLAndCode(url string, code string) error {
 	var urlID int
@@ -26,4 +28,15 @@ func GetURLByCode(code string) (string, error) {
 
 	return url, nil
 
+}
+
+func IsExpiredCode(code string) (bool, error) {
+	var expired bool
+	err := db.QueryRow("SELECT u.expires_at < NOW() FROM urls u JOIN url_codes c ON c.url_id = u.id WHERE c.code = $1", code).Scan(&expired)
+	if err != nil {
+		return false, err
+	}
+	log.Printf("Expired: %t", expired)
+
+	return expired, nil
 }

@@ -12,7 +12,7 @@ CREATE TABLE urls (
 CREATE TABLE url_codes (
     id SERIAL PRIMARY KEY,
     url_id INT NOT NULL REFERENCES urls(id),
-    code CHAR(6) NOT NULL,
+    code VARCHAR(6) NOT NULL,
     created_at TIMESTAMP NOT NULL
 );
 
