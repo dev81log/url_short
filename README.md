@@ -1,6 +1,6 @@
 # URL Shortener
 
-Este é um projeto de um encurtador de URLs, implementado em Go. Ele é constituído por uma API REST que recebe URLs longas e retorna um código curto único que pode ser usado para redirecionar para a URL original. A arquitetura do projeto é composta por várias camadas, incluindo uma camada de banco de dados, duas camadas de acesso aos dados, duas camadas de lógica de negócios e duas camadas de API.
+Este é um projeto de um encurtador de URLs, implementado em Go. Ele é constituído por uma API REST que recebe URLs longas e retorna um código curto único que pode ser usado para redirecionar para a URL original. A arquitetura do projeto é composta por várias camadas, incluindo uma camada de banco de dados, camadas de acesso aos dados, camadas de lógica de negócios e camadas de API.
 
 ## Funcionalidades
 
