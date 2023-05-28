@@ -6,6 +6,6 @@ import (
 
 func main() {
 	internal.Init()
-	internal.InsertURLAndCode("http://example.com", "abcdef")
-
+	internal.InsertURLAndCode("http://exemplolinkpostandsave.com", "123456")
+	internal.GetURLByCode("123456")
 }
