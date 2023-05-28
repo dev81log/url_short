@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-// temp
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 func GenerateUniqueCode() string {

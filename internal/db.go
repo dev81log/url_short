@@ -28,13 +28,6 @@ func Init() {
 	host := os.Getenv("POSTGRES_HOST")
 	port := os.Getenv("POSTGRES_PORT")
 
-	// Print out the environment variables for debugging purposes
-	// fmt.Println("POSTGRES_USER:", username)
-	// fmt.Println("POSTGRES_PASSWORD:", password)
-	// fmt.Println("POSTGRES_DB:", dbname)
-	// fmt.Println("POSTGRES_HOST:", host)
-	// fmt.Println("POSTGRES_PORT:", port)
-
 	status := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", host, port, username, password, dbname)
 
 	db, err = sql.Open("postgres", status)

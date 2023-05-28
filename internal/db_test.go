@@ -10,7 +10,7 @@ import (
 )
 
 func TestInit(t *testing.T) {
-	// Mock environment variables
+
 	os.Setenv("POSTGRES_USER", "username")
 	os.Setenv("POSTGRES_PASSWORD", "password")
 	os.Setenv("POSTGRES_DB", "dbname")
@@ -22,12 +22,10 @@ func TestInit(t *testing.T) {
 
 	Init()
 
-	// Check if log contains success message
 	assert.Contains(t, logOutput.String(), "Successfully connected!")
 
 	assert.NotNil(t, db)
 
-	// Reset environment variables
 	os.Unsetenv("POSTGRES_USER")
 	os.Unsetenv("POSTGRES_PASSWORD")
 	os.Unsetenv("POSTGRES_DB")
