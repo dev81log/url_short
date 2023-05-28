@@ -33,14 +33,9 @@ func shortenURL(c *gin.Context) {
 func redirectURL(c *gin.Context) {
 	code := c.Param("code")
 
-	url, err := internal.GetURLByCode(code)
+	url, err := internal.GetURLFromCodeIfNotExpired(code)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not retrieve URL from database."})
-		return
-	}
-
-	if url == "" {
-		c.JSON(http.StatusNotFound, gin.H{"error": "No URL found for this code."})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 

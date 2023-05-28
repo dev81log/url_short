@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"errors"
 	"math/rand"
 	"time"
 )
@@ -14,4 +15,21 @@ func GenerateUniqueCode() string {
 		b[i] = charset[rand.Intn(len(charset))]
 	}
 	return string(b)
+}
+
+func GetURLFromCodeIfNotExpired(code string) (string, error) {
+	expired, err := IsExpiredCode(code)
+	if err != nil {
+		return "", err
+	}
+	if expired {
+		return "", errors.New("The provided code is expired.")
+	}
+
+	url, err := GetURLByCode(code)
+	if err != nil {
+		return "", err
+	}
+
+	return url, nil
 }
