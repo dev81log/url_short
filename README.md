@@ -1,3 +1,5 @@
+![Asher_Duarte_HTML_CLI_Editor_35b2f734-b33a-4213-8d46-5dedfbe8bc14 (1)](https://github.com/dev81log/url_short/assets/105469529/67367950-c3c2-4738-a1e6-92e1fc8f2c77)
+
 # URL Shortener
 
 Este é um projeto de um encurtador de URLs, implementado em Go. Ele é constituído por uma API REST que recebe URLs longas e retorna um código curto único que pode ser usado para redirecionar para a URL original. A arquitetura do projeto é composta por várias camadas, incluindo uma camada de banco de dados, camadas de acesso aos dados, camadas de lógica de negócios e camadas de API.
